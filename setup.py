@@ -13,7 +13,7 @@ setuptools.setup(
     version="0.1",
     author="Michael Hansen",
     author_email="hansen.mike@gmail.com",
-    url="https://github.com/synesthesiam/rhasspy-hermes",
+    url="https://github.com/synesthesiam/rhasspy-asr",
     packages=setuptools.find_packages(),
     install_requires=requirements,
     classifiers=[
