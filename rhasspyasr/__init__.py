@@ -23,9 +23,16 @@ class Transcription:
 
 
 class Transcriber(ABC):
-    """Base class for Kaldi transcribers."""
+    """Base class for speech to text transcribers."""
 
     @abstractmethod
     def transcribe_wav(self, wav_data: bytes) -> typing.Optional[Transcription]:
         """Speech to text from WAV data."""
+        pass
+
+    @abstractmethod
+    def transcribe_stream(
+        self, audio_stream: typing.Iterable[bytes], sample_rate: int, sample_width: int
+    ) -> typing.Optional[Transcription]:
+        """Speech to text from an audio stream."""
         pass
