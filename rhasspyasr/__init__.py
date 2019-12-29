@@ -32,7 +32,11 @@ class Transcriber(ABC):
 
     @abstractmethod
     def transcribe_stream(
-        self, audio_stream: typing.Iterable[bytes], sample_rate: int, sample_width: int
+        self,
+        audio_stream: typing.Iterable[bytes],
+        sample_rate: int,
+        sample_width: int,
+        channels: int,
     ) -> typing.Optional[Transcription]:
         """Speech to text from an audio stream."""
         pass
