@@ -16,7 +16,7 @@ setuptools.setup(
     version=version,
     author="Michael Hansen",
     author_email="hansen.mike@gmail.com",
-    url="https://github.com/synesthesiam/rhasspy-asr",
+    url="https://github.com/rhasspy/rhasspy-asr",
     packages=setuptools.find_packages(),
     package_data={"rhasspyasr": ["py.typed"]},
     install_requires=requirements,
