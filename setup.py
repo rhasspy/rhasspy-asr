@@ -1,3 +1,4 @@
+"""Set up for rhasspyasr"""
 import os
 import setuptools
 

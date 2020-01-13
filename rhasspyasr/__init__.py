@@ -4,6 +4,8 @@ import typing
 
 import attr
 
+from .utils import read_dict
+
 
 @attr.s
 class Transcription:
