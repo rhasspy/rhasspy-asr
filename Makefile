@@ -1,11 +1,19 @@
 PYTHON_FILES = rhasspyasr/*.py *.py
 
-.PHONY: check test dist venv
+.PHONY: reformat check test dist venv
+
+reformat:
+	black .
+	isort $(PYTHON_FILES)
 
 check:
 	flake8 $(PYTHON_FILES)
 	pylint $(PYTHON_FILES)
 	mypy $(PYTHON_FILES)
+	black --check .
+	isort --check-only $(PYTHON_FILES)
+	yamllint .
+	pip list --outdated	
 
 venv:
 	rm -rf .venv/

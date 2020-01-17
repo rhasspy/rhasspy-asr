@@ -1,6 +1,6 @@
 """Classes for automated speech recognition."""
-from abc import ABC, abstractmethod
 import typing
+from abc import ABC, abstractmethod
 
 import attr
 
