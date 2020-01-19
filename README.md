@@ -1,6 +1,5 @@
 # Rhasspy ASR
 
-
 [![Continous Integration](https://github.com/rhasspy/rhasspy-asr/workflows/Tests/badge.svg)](https://github.com/rhasspy/rhasspy-asr/actions)
 [![PyPI package version](https://img.shields.io/pypi/v/rhasspy-asr.svg)](https://pypi.org/project/rhasspy-asr)
 [![Python versions](https://img.shields.io/pypi/pyversions/rhasspy-asr.svg)](https://www.python.org)
