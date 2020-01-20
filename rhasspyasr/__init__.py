@@ -4,8 +4,6 @@ from abc import ABC, abstractmethod
 
 import attr
 
-from .utils import read_dict
-
 
 @attr.s
 class Transcription:
