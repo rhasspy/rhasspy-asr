@@ -13,7 +13,7 @@ check:
 	black --check .
 	isort --check-only $(PYTHON_FILES)
 	yamllint .
-	pip list --outdated	
+	pip list --outdated
 
 venv:
 	rm -rf .venv/
