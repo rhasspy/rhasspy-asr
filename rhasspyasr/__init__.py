@@ -5,21 +5,21 @@ from abc import ABC, abstractmethod
 import attr
 
 
-@attr.s
+@attr.s(auto_attribs=True)
 class Transcription:
     """Result of speech to text."""
 
     # Final transcription text
-    text: str = attr.ib()
+    text: str
 
     # Likelihood of transcription 0-1, 1 being sure
-    likelihood: float = attr.ib()
+    likelihood: float
 
     # Seconds it took to do transcription
-    transcribe_seconds: float = attr.ib()
+    transcribe_seconds: float
 
     # Duration of the transcribed WAV audio
-    wav_seconds: float = attr.ib()
+    wav_seconds: float
 
 
 class Transcriber(ABC):
