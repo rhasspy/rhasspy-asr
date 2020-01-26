@@ -30,7 +30,7 @@ def read_dict(
             # Skip Julius extras
             pronounce = " ".join(p for p in parts if p[0] not in {"[", "@"})
 
-            word = word.split('(')[0]
+            word = word.split("(")[0]
             # Julius format word1+word2
             words = word.split("+")
 
