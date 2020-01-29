@@ -28,7 +28,6 @@ class Transcriber(ABC):
     @abstractmethod
     def transcribe_wav(self, wav_data: bytes) -> typing.Optional[Transcription]:
         """Speech to text from WAV data."""
-        pass
 
     @abstractmethod
     def transcribe_stream(
@@ -39,4 +38,7 @@ class Transcriber(ABC):
         channels: int,
     ) -> typing.Optional[Transcription]:
         """Speech to text from an audio stream."""
-        pass
+
+    @abstractmethod
+    def stop(self):
+        """Stop the transcriber."""
