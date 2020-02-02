@@ -5,7 +5,7 @@ from abc import ABC, abstractmethod
 import attr
 
 
-@attr.s(auto_attribs=True)
+@attr.s(auto_attribs=True, slots=True)
 class Transcription:
     """Result of speech to text."""
 
