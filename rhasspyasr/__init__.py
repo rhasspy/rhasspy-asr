@@ -26,7 +26,7 @@ class Transcriber(ABC):
     """Base class for speech to text transcribers."""
 
     @abstractmethod
-    def transcribe_wav(self, wav_data: bytes) -> typing.Optional[Transcription]:
+    def transcribe_wav(self, wav_bytes: bytes) -> typing.Optional[Transcription]:
         """Speech to text from WAV data."""
 
     @abstractmethod
