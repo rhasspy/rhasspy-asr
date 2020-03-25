@@ -1,11 +1,10 @@
 """Classes for automated speech recognition."""
 import typing
 from abc import ABC, abstractmethod
+from dataclasses import dataclass
 
-import attr
 
-
-@attr.s(auto_attribs=True, slots=True)
+@dataclass
 class Transcription:
     """Result of speech to text."""
 

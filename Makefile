@@ -3,6 +3,8 @@ PIP_INSTALL ?= install
 
 .PHONY: reformat check test dist venv
 
+all: venv
+
 reformat:
 	scripts/format-code.sh $(PYTHON_FILES)
 
