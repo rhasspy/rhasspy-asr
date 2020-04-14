@@ -5,20 +5,57 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Transcription:
-    """Result of speech to text."""
+class TranscriptionToken:
+    """Token from transcription.
 
-    # Final transcription text
-    text: str
+    Attributes
+    ----------
+    token: str
+        Token value
 
-    # Likelihood of transcription 0-1, 1 being sure
+    start_time: float
+        Seconds in utterance that token starts
+
+    end_time: float
+        Seconds in utterance that token ends
+
+    likelihood: float
+        Likelihood of transcription 0-1, 1 being sure
+    """
+
+    token: str
+    start_time: float
+    end_time: float
     likelihood: float
 
-    # Seconds it took to do transcription
-    transcribe_seconds: float
 
-    # Duration of the transcribed WAV audio
+@dataclass
+class Transcription:
+    """Result of speech to text.
+
+    Attributes
+    ----------
+    text: str
+        Final transcription text
+
+    likelihood: float
+        Likelihood of transcription 0-1, 1 being sure
+
+    transcribe_seconds: float
+        Seconds it took to do transcription
+
     wav_seconds: float
+        Duration of the transcribed WAV audio
+
+    tokens: Optional[List[TranscriptionToken]] = None
+        Optional list of tokens with times
+    """
+
+    text: str
+    likelihood: float
+    transcribe_seconds: float
+    wav_seconds: float
+    tokens: typing.Optional[typing.List[TranscriptionToken]] = None
 
 
 class Transcriber(ABC):
