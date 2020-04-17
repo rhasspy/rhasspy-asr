@@ -57,6 +57,11 @@ class Transcription:
     wav_seconds: float
     tokens: typing.Optional[typing.List[TranscriptionToken]] = None
 
+    @classmethod
+    def empty(cls) -> "Transcription":
+        """Returns an empty transcription."""
+        return Transcription(text="", likelihood=0, transcribe_seconds=0, wav_seconds=0)
+
 
 class Transcriber(ABC):
     """Base class for speech to text transcribers."""
